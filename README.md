@@ -1,2 +1,2 @@
 # wannacry
-just an RSA encryption test.
+Just an RSA encryption test.
