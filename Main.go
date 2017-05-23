@@ -12,7 +12,7 @@ import (
 )
 
 func canHandle(f string) bool {
-	r := regexp.MustCompile(`(?i)(.*?)\.(ppt|pptx|xls|xlsx|doc|docx|jpg|jpeg|png|imaxct)$`)
+	r := regexp.MustCompile(`(?i)(.*?)\.(ppt|pptx|xls|xlsx|doc|docx|jpg|jpeg|png|py|java|cpp|kt|imaxct)$`)
 	return r.MatchString(f)
 }
 
@@ -22,7 +22,6 @@ func main() {
 	flag.Parse()
 
 	if len(*file) == 0 || !canHandle(*file) {
-		fmt.Fprint(os.Stderr, "wrong input file")
 		return
 	}
 
